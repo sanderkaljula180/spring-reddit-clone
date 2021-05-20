@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Optional;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 class UserRepositoryTest {
 
     @Autowired
@@ -24,5 +26,6 @@ class UserRepositoryTest {
         Optional<User> userNameExists = userRepository.findByUsername(username);
 
         // then
+        assertThat(userNameExists).isNotEmpty();
     }
 }

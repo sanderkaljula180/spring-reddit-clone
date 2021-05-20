@@ -29,7 +29,7 @@ import java.util.UUID;
 @Service
 @AllArgsConstructor
 @Transactional
-public class AuthService {
+public class  AuthService {
 
     private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
